@@ -3,6 +3,9 @@ package com.openfinanceparticipants.core.utils;
 import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
 import org.junit.jupiter.api.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
