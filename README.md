@@ -21,3 +21,11 @@ Short on time to analyze and create a PostmanCollection with information from in
 ## Contributing
 
 We've released **OFP-FACILITATOR** because it helps us to keep the PostmanCollection always updated with information from the banks participating in OpenFinance Brazil. We hope that other organizations can benefit from the project. We are thankful for any contributions from the community.
+
+## Technologies
+
+- ``Java 17``
+- ``Springboot 3``
+- ``OpenAPI / Swagger``
+- ``Hexagonal Architecture``
+- ``InteliJ IDEA``
