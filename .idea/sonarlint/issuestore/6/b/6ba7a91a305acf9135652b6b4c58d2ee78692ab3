@@ -1,7 +1,0 @@
-
-m
-java:S3008"WRename this field "PC_FILE_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ˆþµ
-;
-java:S11815"%Catch Exception instead of Throwable.(æÞ£Ö
-i
-java:S6204„"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹

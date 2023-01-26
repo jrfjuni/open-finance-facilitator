@@ -19,15 +19,17 @@
 *.tar.gz
 *.rar
 
-# User-specific stuff:
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-### JetBrains template
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
-
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
+*.ipr
 
 ### Maven template
 target/
