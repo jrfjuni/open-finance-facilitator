@@ -155,7 +155,7 @@ public final class OpenFinanceParticipantServiceImp implements OpenFinancePartic
      * @return
      */
     private String getPostmanCollectionFileName(){
-        final var sdf = new  SimpleDateFormat("mm-dd-yyyy");
+        final var sdf = new SimpleDateFormat("MM-dd-yyyy");
         return String.format(PC_FILE_NAME, sdf.format(new Date()));
     }
 }
