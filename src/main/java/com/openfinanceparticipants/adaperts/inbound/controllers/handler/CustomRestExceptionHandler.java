@@ -1,7 +1,7 @@
-package com.openfinanceparticipants.adaperts.exception.handler;
+package com.openfinanceparticipants.adaperts.inbound.controllers.handler;
 
 import com.openfinanceparticipants.adaperts.exception.OpenFinanceParticipantsRestException;
-import com.openfinanceparticipants.adaperts.exception.handler.model.ApiValidationError;
+import com.openfinanceparticipants.adaperts.inbound.controllers.handler.model.ApiValidationError;
 import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

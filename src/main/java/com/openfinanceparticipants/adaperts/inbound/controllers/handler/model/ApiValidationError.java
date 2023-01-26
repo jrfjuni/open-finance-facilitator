@@ -1,4 +1,4 @@
-package com.openfinanceparticipants.adaperts.exception.handler.model;
+package com.openfinanceparticipants.adaperts.inbound.controllers.handler.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

@@ -1,4 +1,4 @@
-package com.openfinanceparticipants.adaperts.exception.handler;
+package com.openfinanceparticipants.adaperts.inbound.controllers.handler;
 
 import com.openfinanceparticipants.adaperts.exception.OpenFinanceParticipantsRestException;
 import lombok.extern.slf4j.Slf4j;
