@@ -25,7 +25,7 @@ We've released **OFP-FACILITATOR** because it helps us to keep the ``PostmanColl
 ## Technologies
 
 - ``Java 17``
-- ``JUnit (unit/integration tests)  ``
+- ``JUnit 5``
 - ``Springboot 3``
 - ``OpenAPI / Swagger``
 - ``Hexagonal Architecture``
