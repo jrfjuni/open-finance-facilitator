@@ -1,0 +1,215 @@
+[{
+  "OrganisationId": "fefac57d-1d50-5615-89b2-0b2d80623a28",
+  "Status": "Active",
+  "OrganisationName": "CCR DE OURO",
+  "CreatedOn": "2021-01-11T17:11:30.743Z",
+  "LegalEntityName": "COOPERATIVA DE CRÉDITO RURAL DE OURO   SULCREDI/OURO",
+  "CountryOfRegistration": "BR",
+  "CompanyRegister": "Cadastro Nacional da Pessoa Jurídica",
+  "Tag": [
+    "Cooperativas de Crédito Singulares, Centrais e Confederações"
+  ],
+  "Size": null,
+  "RegistrationNumber": "07853842000135",
+  "RegistrationId": "07853842",
+  "RegisteredName": "COOPERATIVA DE CRÉDITO RURAL DE OURO   SULCREDI/OURO",
+  "AddressLine1": "Rua Felipe Schmidt 1882",
+  "AddressLine2": "Centro",
+  "City": "Ouro, SC",
+  "Postcode": "89663-000",
+  "Country": "BR",
+  "ParentOrganisationReference": "",
+  "AuthorisationServers": [
+    {
+      "AuthorisationServerId": "780f2093-e531-4ac0-b7b3-016d55812b4d",
+      "AutoRegistrationSupported": true,
+      "AutoRegistrationNotificationWebhook": null,
+      "SupportsCiba": false,
+      "SupportsDCR": false,
+      "SupportsRedirect": false,
+      "ApiResources": [
+        {
+          "ApiResourceId": "1c506bea-ed19-4289-81b7-f00ab48d8a1d",
+          "ApiVersion": "1",
+          "ApiDiscoveryEndpoints": [
+            {
+              "ApiDiscoveryId": "e84d8015-253d-4d8c-8861-0b904f4ade6a",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/channels/v1/branches"
+            },
+            {
+              "ApiDiscoveryId": "ac7683f5-34ff-4012-b5b3-fd03d393dde1",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/channels/v1/electronic-channels"
+            },
+            {
+              "ApiDiscoveryId": "a4e4434f-cdf8-469c-9668-286488ec5069",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/channels/v1/phone-channels"
+            },
+            {
+              "ApiDiscoveryId": "4abde9c9-dba9-4306-ae2b-f006dc2c44c0",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/channels/v1/banking-agents"
+            },
+            {
+              "ApiDiscoveryId": "77469582-3061-42fd-9bc3-7129954e92c1",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/channels/v1/shared-automated-teller-machines"
+            }
+          ],
+          "FamilyComplete": false,
+          "ApiCertificationUri": null,
+          "CertificationStatus": null,
+          "CertificationStartDate": null,
+          "CertificationExpirationDate": null,
+          "ApiFamilyType": "channels"
+        },
+        {
+          "ApiResourceId": "336bdf44-cf95-4112-b455-7f2d9ee5404d",
+          "ApiVersion": "1",
+          "ApiDiscoveryEndpoints": [
+            {
+              "ApiDiscoveryId": "c598bbb0-2c86-4c94-99de-229f539cf747",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/discovery/v1/status"
+            },
+            {
+              "ApiDiscoveryId": "decc7e84-15e0-4957-aeac-f02958c8ffc0",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/discovery/v1/outages"
+            }
+          ],
+          "FamilyComplete": false,
+          "ApiCertificationUri": null,
+          "CertificationStatus": null,
+          "CertificationStartDate": null,
+          "CertificationExpirationDate": null,
+          "ApiFamilyType": "discovery"
+        },
+        {
+          "ApiResourceId": "6754cb7b-4338-41c0-a1b3-b94e852927fa",
+          "ApiVersion": "1",
+          "ApiDiscoveryEndpoints": [
+            {
+              "ApiDiscoveryId": "39e72112-9f78-4fda-9a29-9f57dac2ac7b",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/admin/v1/metrics"
+            }
+          ],
+          "FamilyComplete": false,
+          "ApiCertificationUri": null,
+          "CertificationStatus": null,
+          "CertificationStartDate": null,
+          "CertificationExpirationDate": null,
+          "ApiFamilyType": "admin"
+        },
+        {
+          "ApiResourceId": "d33ff8af-5a1b-4b43-90d4-34237997d080",
+          "ApiVersion": "1",
+          "ApiDiscoveryEndpoints": [
+            {
+              "ApiDiscoveryId": "e5407978-3100-4c8d-836b-3e3ad85a87b6",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/personal-accounts"
+            },
+            {
+              "ApiDiscoveryId": "a7c2b736-64cb-4f95-9090-0e22f984e971",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/business-accounts"
+            },
+            {
+              "ApiDiscoveryId": "06d06954-28cd-415e-a9b3-0cd0d55597a5",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/personal-loans"
+            },
+            {
+              "ApiDiscoveryId": "108aa87b-c061-45f5-8776-b5d212ed76a6",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/business-loans"
+            },
+            {
+              "ApiDiscoveryId": "8d78dda3-5449-4c8c-97a0-abdd32003b05",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/personal-financings"
+            },
+            {
+              "ApiDiscoveryId": "205516d1-2f8a-4c61-a669-d8daa4fc3091",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/business-financings"
+            },
+            {
+              "ApiDiscoveryId": "4cd2855c-f021-4b3d-a27f-8dab922f477c",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/personal-invoice-financings"
+            },
+            {
+              "ApiDiscoveryId": "5381bfb9-e9ee-4fa2-b39b-7a4b14727b1a",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/business-invoice-financings"
+            },
+            {
+              "ApiDiscoveryId": "50b7fc17-a564-4b64-b057-7ab1acc407c1",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/personal-credit-cards"
+            },
+            {
+              "ApiDiscoveryId": "27da9571-d45a-440d-8dff-4eb9382fd778",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/business-credit-cards"
+            },
+            {
+              "ApiDiscoveryId": "c15c30d0-9e8e-48fa-acfc-7a9de3990222",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/personal-unarranged-account-overdraft"
+            },
+            {
+              "ApiDiscoveryId": "05a97a37-1912-4648-87a0-da37e06f6a4d",
+              "ApiEndpoint": "https://api.sulcrediouro.com.br/open-banking/products-services/v1/business-unarranged-account-overdraft"
+            }
+          ],
+          "FamilyComplete": false,
+          "ApiCertificationUri": null,
+          "CertificationStatus": null,
+          "CertificationStartDate": null,
+          "CertificationExpirationDate": null,
+          "ApiFamilyType": "products-services"
+        }
+      ],
+      "AuthorisationServerCertifications": [
+
+      ],
+      "CustomerFriendlyDescription": "A Sulcredi Ouro atua no mercado financeiro desde Fevereiro de 2006 com a proposta de oferecer produtos e serviços financeiros com condições atrativas e diferenciadas  de acordo com as necessidades dos associados da região onde atua.",
+      "CustomerFriendlyLogoUri": "https://sulcredi.com.br/sistema/arquivos/imagens/d35f03444597b6faf04a873919f2f06e.svg",
+      "CustomerFriendlyName": "CCR de Ouro Auth Server",
+      "DeveloperPortalUri": "https://api.sulcrediouro.com.br/open-banking/naoseaplica",
+      "TermsOfServiceUri": "https://api.sulcrediouro.com.br/open-banking/naoseaplica",
+      "NotificationWebhookAddedDate": null,
+      "OpenIDDiscoveryDocument": "https://api.dev.ouro.hub.cashway.fsapps.io/orgs/ouro/.well-known/openid-configuration",
+      "Issuer": "https://api.dev.ouro.hub.cashway.fsapps.io/orgs/ouro",
+      "PayloadSigningCertLocationUri": "https://api.dev.ouro.hub.cashway.fsapps.io/orgs/ouro/jwks",
+      "ParentAuthorisationServerId": null,
+      "DeprecatedDate": null,
+      "RetirementDate": null,
+      "SupersededByAuthorisationServerId": null
+    }
+  ],
+  "OrgDomainClaims": [
+    {
+      "AuthorisationDomainName": "Open Banking",
+      "AuthorityName": "Banco Central do Brasil",
+      "RegistrationId": "",
+      "Status": "Active"
+    }
+  ],
+  "OrgDomainRoleClaims": [
+    {
+      "Status": "Active",
+      "AuthorisationDomain": "Open Banking",
+      "Role": "CONTA",
+      "Authorisations": [
+
+      ],
+      "RegistrationId": "07853842"
+    },
+    {
+      "Status": "Inactive",
+      "AuthorisationDomain": "Open Banking",
+      "Role": "DADOS",
+      "Authorisations": [
+
+      ],
+      "RegistrationId": "07853842"
+    },
+    {
+      "Status": "Inactive",
+      "AuthorisationDomain": "Open Banking",
+      "Role": "PAGTO",
+      "Authorisations": [
+
+      ],
+      "RegistrationId": "07853842"
+    }
+  ]
+}]
