@@ -1,6 +1,6 @@
-package com.openfinanceparticipants.adaperts.config;
+package com.openfinanceparticipants.adapters.config;
 
-import com.openfinanceparticipants.adaperts.inbound.controllers.handler.RestTemplateResponseErrorHandler;
+import com.openfinanceparticipants.adapters.inbound.controllers.handler.RestTemplateResponseErrorHandler;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,6 +1,6 @@
-package com.openfinanceparticipants.adaperts.outbound.rest.participants;
+package com.openfinanceparticipants.adapters.outbound.rest.participants;
 
-import com.openfinanceparticipants.adaperts.constants.OpenFinanceBrazil;
+import com.openfinanceparticipants.adapters.constants.OpenFinanceBrazil;
 import com.openfinanceparticipants.core.domain.participant.OpenFinanceParticipant;
 import com.openfinanceparticipants.core.ports.OpenFinanceParticipantRestPort;
 import org.springframework.beans.factory.annotation.Autowired;

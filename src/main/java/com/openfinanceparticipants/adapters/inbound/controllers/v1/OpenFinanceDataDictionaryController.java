@@ -1,4 +1,4 @@
-package com.openfinanceparticipants.adaperts.inbound.controllers.v1;
+package com.openfinanceparticipants.adapters.inbound.controllers.v1;
 
 import com.openfinanceparticipants.core.ports.OpenFinanceDataDictionaryPort;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
-package com.openfinanceparticipants.adaperts.inbound.controllers.handler;
+package com.openfinanceparticipants.adapters.inbound.controllers.handler;
 
-import com.openfinanceparticipants.adaperts.exception.OpenFinanceParticipantsRestException;
+import com.openfinanceparticipants.adapters.exception.OpenFinanceParticipantsRestException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatusCode;

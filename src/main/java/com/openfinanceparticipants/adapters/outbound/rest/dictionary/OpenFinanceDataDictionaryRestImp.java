@@ -1,6 +1,6 @@
-package com.openfinanceparticipants.adaperts.outbound.rest.dictionary;
+package com.openfinanceparticipants.adapters.outbound.rest.dictionary;
 
-import com.openfinanceparticipants.adaperts.constants.OpenFinanceBrazil;
+import com.openfinanceparticipants.adapters.constants.OpenFinanceBrazil;
 import com.openfinanceparticipants.core.ports.OpenFinanceDataDictionaryRestPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;

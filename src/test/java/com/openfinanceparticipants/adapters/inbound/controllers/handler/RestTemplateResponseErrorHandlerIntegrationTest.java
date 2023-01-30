@@ -1,9 +1,9 @@
 package com.openfinanceparticipants.adapters.inbound.controllers.handler;
 
-import com.openfinanceparticipants.adaperts.config.RestTemplateWithErrorHandlerConfig;
-import com.openfinanceparticipants.adaperts.constants.OpenFinanceBrazil;
-import com.openfinanceparticipants.adaperts.exception.OpenFinanceParticipantsRestException;
-import com.openfinanceparticipants.adaperts.outbound.rest.participants.OpenFinanceParticipantRestImp;
+import com.openfinanceparticipants.adapters.config.RestTemplateWithErrorHandlerConfig;
+import com.openfinanceparticipants.adapters.constants.OpenFinanceBrazil;
+import com.openfinanceparticipants.adapters.exception.OpenFinanceParticipantsRestException;
+import com.openfinanceparticipants.adapters.outbound.rest.participants.OpenFinanceParticipantRestImp;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

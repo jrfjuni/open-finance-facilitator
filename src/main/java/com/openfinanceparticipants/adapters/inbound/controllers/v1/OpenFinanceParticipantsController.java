@@ -1,6 +1,6 @@
-package com.openfinanceparticipants.adaperts.inbound.controllers.v1;
+package com.openfinanceparticipants.adapters.inbound.controllers.v1;
 
-import com.openfinanceparticipants.adaperts.inbound.controllers.handler.model.ApiValidationError;
+import com.openfinanceparticipants.adapters.inbound.controllers.handler.model.ApiValidationError;
 import com.openfinanceparticipants.core.domain.postman.Postman;
 import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
 import com.openfinanceparticipants.core.ports.OpenFinanceParticipantPort;
