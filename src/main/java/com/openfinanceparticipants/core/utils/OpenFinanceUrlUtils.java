@@ -5,9 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import java.net.URL;
+import java.util.regex.Pattern;
 
 @Slf4j
-public class UrlUtils {
+public class OpenFinanceUrlUtils {
+
+    private static final String PARAM_REGEX = "^(\\{.+})$";
 
     public static String[] getHostByURL(final String urlStr) throws OpenFinanceException {
         try{
@@ -37,5 +40,22 @@ public class UrlUtils {
             log.error("Error getting protocol. {}", throwable);
             throw new OpenFinanceException("Error getting protocol.");
         }
+    }
+
+    public static String getLastPathWithoutParam(final String[] paths) {
+        Pattern pattern = Pattern.compile(PARAM_REGEX);
+
+        String lastPath = "";
+
+        iterator:
+        for(int i = paths.length - 1; i > 0;  i--){
+            lastPath = paths[i];
+            final var isNotValid = pattern.matcher(lastPath).matches();
+
+            if(!isNotValid)
+             break iterator;
+        }
+
+        return lastPath;
     }
 }

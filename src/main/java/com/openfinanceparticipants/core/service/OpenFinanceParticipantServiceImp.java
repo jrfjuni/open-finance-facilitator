@@ -7,7 +7,7 @@ import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
 import com.openfinanceparticipants.core.ports.OpenFinanceParticipantPort;
 import com.openfinanceparticipants.core.ports.OpenFinanceParticipantRestPort;
 import com.openfinanceparticipants.core.utils.OpenFinanceFileUtils;
-import com.openfinanceparticipants.core.utils.UrlUtils;
+import com.openfinanceparticipants.core.utils.OpenFinanceUrlUtils;
 import com.openfinanceparticipants.core.domain.postman.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,9 +90,9 @@ public final class OpenFinanceParticipantServiceImp implements OpenFinancePartic
 
             try{
                 final var endPoint =  apiDiscoveryEndpoint.getEndPoint();
-                final var protocol = UrlUtils.getProtocolByURL(endPoint);
-                final var splittedHost = UrlUtils.getHostByURL(endPoint);
-                final var splittedPath = UrlUtils.getPathByURL(endPoint);
+                final var protocol = OpenFinanceUrlUtils.getProtocolByURL(endPoint);
+                final var splittedHost = OpenFinanceUrlUtils.getHostByURL(endPoint);
+                final var splittedPath = OpenFinanceUrlUtils.getPathByURL(endPoint);
 
                 final var subItem =
                     PostmanSubItem.builder()

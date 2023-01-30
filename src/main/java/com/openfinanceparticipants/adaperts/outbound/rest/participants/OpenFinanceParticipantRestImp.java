@@ -1,4 +1,4 @@
-package com.openfinanceparticipants.adaperts.outbound.rest;
+package com.openfinanceparticipants.adaperts.outbound.rest.participants;
 
 import com.openfinanceparticipants.adaperts.constants.OpenFinanceBrazil;
 import com.openfinanceparticipants.core.domain.participant.OpenFinanceParticipant;
