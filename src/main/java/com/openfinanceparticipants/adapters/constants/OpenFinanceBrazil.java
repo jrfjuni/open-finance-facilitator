@@ -1,4 +1,4 @@
-package com.openfinanceparticipants.adaperts.constants;
+package com.openfinanceparticipants.adapters.constants;
 
 public interface OpenFinanceBrazil {
 

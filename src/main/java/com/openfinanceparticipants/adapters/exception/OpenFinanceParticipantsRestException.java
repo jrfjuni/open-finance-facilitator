@@ -1,4 +1,4 @@
-package com.openfinanceparticipants.adaperts.exception;
+package com.openfinanceparticipants.adapters.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
