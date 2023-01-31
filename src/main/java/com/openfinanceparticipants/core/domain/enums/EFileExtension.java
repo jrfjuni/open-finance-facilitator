@@ -5,7 +5,10 @@ import lombok.Getter;
 @Getter
 public enum EFileExtension {
 
-    JSON(".json");
+    JSON(".json"),
+    CSV(".csv"),
+    XLSX(".xlsx"),
+    XLS(".xls");
 
     private String value;
 

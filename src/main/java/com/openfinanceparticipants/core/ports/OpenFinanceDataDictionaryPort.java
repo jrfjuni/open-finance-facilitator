@@ -1,5 +1,7 @@
 package com.openfinanceparticipants.core.ports;
 
+import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
+
 /**
  * Class responsible for excuting tasks related to the OpenFinance Brasil API's data dictionaries.
  * @date Jan 30, 2023
@@ -7,5 +9,5 @@ package com.openfinanceparticipants.core.ports;
  *
  */
 public interface OpenFinanceDataDictionaryPort {
-    void dataDictionary();
+    void findDataDictionaryConvertToExcelAndSave() throws OpenFinanceException;
 }

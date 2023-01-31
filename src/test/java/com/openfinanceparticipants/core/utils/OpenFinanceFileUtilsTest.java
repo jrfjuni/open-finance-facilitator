@@ -2,6 +2,7 @@ package com.openfinanceparticipants.core.utils;
 
 import com.openfinanceparticipants.core.domain.enums.EFileExtension;
 import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.Objects;

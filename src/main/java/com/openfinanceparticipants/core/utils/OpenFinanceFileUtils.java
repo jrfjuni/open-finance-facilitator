@@ -17,17 +17,27 @@ public class OpenFinanceFileUtils {
                                                 final Object object) throws OpenFinanceException {
         try {
 
+            // Converting object content file to string
+            final var objectAsString = new ObjectMapper().writeValueAsString(object);
+            return createTempFileFromString(fileName, fileExtension, objectAsString);
+        }catch (final Throwable ex) {
+            log.error("Error to create a temp file: {}", ex.getMessage());
+            throw new OpenFinanceException("Error to create a temp file.");
+        }
+    }
+
+    public static File createTempFileFromString(final String fileName, final EFileExtension fileExtension,
+                                                final String content) throws OpenFinanceException {
+        try {
+
             // Creating a temp file
             final File tempFile = File.createTempFile(fileName, fileExtension.getValue());
 
-            // Converting object content file to string
-            final var postmanObjectAsString = new ObjectMapper().writeValueAsString(object);
-
             // Converting string content file to byte[] with Charsets
-            final var postmanStringAsByte = postmanObjectAsString.getBytes(StandardCharsets.UTF_8);
+            final var stringAsByte = content.getBytes(StandardCharsets.UTF_8);
 
             // Writing content
-            Files.write(Paths.get(tempFile.toURI()), postmanStringAsByte);
+            Files.write(Paths.get(tempFile.toURI()), stringAsByte);
 
             return tempFile;
         }catch (final Throwable ex) {

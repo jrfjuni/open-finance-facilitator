@@ -14,7 +14,7 @@ public class OpenFinanceUrlUtilsTest {
     void give_validUrlForHost_than_success() throws OpenFinanceException {
        final var hostSplited = OpenFinanceUrlUtils.getHostByURL(URL);
         assertEquals("api", hostSplited[0]);
-        assertEquals("public", hostSplited[1]);
+        assertEquals("myBank", hostSplited[1]);
         assertEquals("com", hostSplited[2]);
     }
 

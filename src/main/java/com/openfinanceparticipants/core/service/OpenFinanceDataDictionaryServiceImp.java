@@ -1,19 +1,18 @@
 package com.openfinanceparticipants.core.service;
 
+import com.openfinanceparticipants.core.domain.csv.Csv;
+import com.openfinanceparticipants.core.domain.excel.ExcelModel;
 import com.openfinanceparticipants.core.domain.participant.server.ApiDiscoveryEndpoint;
 import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
-import com.openfinanceparticipants.core.ports.OpenFinanceDataDictionaryPort;
-import com.openfinanceparticipants.core.ports.OpenFinanceDataDictionaryRestPort;
-import com.openfinanceparticipants.core.ports.OpenFinanceParticipantRestPort;
+import com.openfinanceparticipants.core.exceptions.OpenFinanceRepositoryException;
+import com.openfinanceparticipants.core.exceptions.excel.OpenFinanceExcelException;
+import com.openfinanceparticipants.core.ports.*;
 import com.openfinanceparticipants.core.utils.OpenFinanceUrlUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 @Slf4j
@@ -25,8 +24,14 @@ public class OpenFinanceDataDictionaryServiceImp implements OpenFinanceDataDicti
     @Autowired
     private OpenFinanceDataDictionaryRestPort dataDictionaryRestPort;
 
+    @Autowired
+    private OpenFinanceExcelPort openFinanceExcelPort;
+
+    @Autowired
+    private OpenFinanceDataDictionaryRepositoryPort openFinanceDataDictionaryRepositoryPort;
+
     @Override
-    public void dataDictionary(){
+    public void findDataDictionaryConvertToExcelAndSave() throws OpenFinanceException {
         final var participants = participantRestPort.getAll();
 
         // Using Set List to  not contain duplicate values.
@@ -38,7 +43,19 @@ public class OpenFinanceDataDictionaryServiceImp implements OpenFinanceDataDicti
                     // The URL path (ex: /products-services/v1/personal-accounts) is default for all participants.
                     resource.getEndpoints().forEach(endpoint -> formatAndAddPathToSetList(endpoint, pathList)))));
 
-        final var csvFiles = downloadFiles(pathList);
+        final var csvList = downloadFiles(pathList);
+        convertToExcelAndSave(csvList);
+    }
+
+    private void convertToExcelAndSave(final List<Csv> csvList) throws OpenFinanceException {
+
+        try {
+            final List<ExcelModel> excelModelList = openFinanceExcelPort.convertFromCsvToXlsx(csvList);
+            openFinanceDataDictionaryRepositoryPort.saveExcelFileInLocalDirectory(excelModelList);
+        } catch (OpenFinanceExcelException | OpenFinanceRepositoryException e) {
+            log.error("Error to convert from .csv to .xlsx and save files: {}", e.getMessage());
+            throw e;
+        }
     }
 
     /**
@@ -69,13 +86,16 @@ public class OpenFinanceDataDictionaryServiceImp implements OpenFinanceDataDicti
      * @param filePaths
      * @return List of CSV files.
      */
-    private List<String> downloadFiles(final Set<String> filePaths) {
-        List<String> csvFiles = new ArrayList<>();
+    private List<Csv> downloadFiles(final Set<String> filePaths) {
+        List<Csv> csvFiles = new ArrayList<>();
 
         filePaths.forEach(path -> {
             try {
                 final var csvAsString = dataDictionaryRestPort.getOpenFinanceDataDictionaryByFileName(path);
-                csvFiles.add(csvAsString);
+                csvFiles.add(Csv.builder()
+                                .name(path)
+                                .content(csvAsString)
+                                .build());
             }catch (final Throwable  t){
                 log.error("File download error: {} {}", t.getMessage(), path);
             }

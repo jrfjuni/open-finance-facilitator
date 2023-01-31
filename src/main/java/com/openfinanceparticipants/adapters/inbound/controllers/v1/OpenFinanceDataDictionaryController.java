@@ -1,6 +1,9 @@
 package com.openfinanceparticipants.adapters.inbound.controllers.v1;
 
+import com.openfinanceparticipants.adapters.outbound.output.DataDirectoryOutput;
+import com.openfinanceparticipants.core.exceptions.OpenFinanceException;
 import com.openfinanceparticipants.core.ports.OpenFinanceDataDictionaryPort;
+import com.openfinanceparticipants.core.ports.OpenFinanceDataDictionaryRepositoryPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +19,13 @@ public class OpenFinanceDataDictionaryController {
     @Autowired
     private OpenFinanceDataDictionaryPort openFinanceDataDictionaryPort;
 
+    @Autowired
+    private OpenFinanceDataDictionaryRepositoryPort openFinanceDataDictionaryRepositoryPort;
+
     @PostMapping
-    public ResponseEntity dataDictionary(){
-        openFinanceDataDictionaryPort.dataDictionary();
-        return ResponseEntity.ok().build();
+    public ResponseEntity dataDictionary() throws OpenFinanceException {
+       openFinanceDataDictionaryPort.findDataDictionaryConvertToExcelAndSave();
+       final var path = openFinanceDataDictionaryRepositoryPort.getPathToSaveFiles();
+       return ResponseEntity.ok().body(DataDirectoryOutput.of(path));
     }
 }
