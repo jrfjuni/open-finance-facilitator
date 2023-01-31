@@ -41,7 +41,7 @@ public class OpenFinanceParticipantsController {
                 produces = {MediaType.APPLICATION_OCTET_STREAM_VALUE, MediaType.APPLICATION_JSON_VALUE} )
     public ResponseEntity generatePostmanCollection() throws OpenFinanceException, FileNotFoundException {
         final var  postmanCollectionFile  =  openFinanceParticipantPort.generatePostmanCollectionFile();
-        final  var resource = new InputStreamResource(new FileInputStream(postmanCollectionFile));
+        final var resource = new InputStreamResource(new FileInputStream(postmanCollectionFile));
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + postmanCollectionFile.getName() + "\"")
                 .contentLength(postmanCollectionFile.length())

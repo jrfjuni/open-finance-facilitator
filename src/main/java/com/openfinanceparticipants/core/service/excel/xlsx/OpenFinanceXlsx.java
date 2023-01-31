@@ -9,7 +9,6 @@ import com.openfinanceparticipants.core.exceptions.excel.OpenFinanceXlsxExcepion
 import com.openfinanceparticipants.core.utils.OpenFinanceNumberUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -22,7 +21,7 @@ import java.util.List;
 @Component
 public class OpenFinanceXlsx extends OpenFinanceXlsxStyle {
 
-    public List<ExcelModel> convertToXlsx(final List<Csv> csvFiles) throws OpenFinanceExcelException {
+    public List<ExcelModel> convertToXlsx(final List<Csv> csvFiles) {
         List<ExcelModel> excelModels = new ArrayList<>();
 
         for(Csv csvFile: csvFiles){

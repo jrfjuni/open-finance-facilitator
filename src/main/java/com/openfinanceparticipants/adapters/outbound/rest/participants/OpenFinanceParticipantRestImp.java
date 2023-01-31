@@ -18,12 +18,12 @@ public class OpenFinanceParticipantRestImp implements OpenFinanceParticipantRest
     RestTemplate restTemplate;
 
     public List<OpenFinanceParticipant> getAll(){
-            final var response=
-                    restTemplate.exchange(
-                            OpenFinanceBrazil.URL_PARTICIPANTS,
-                            HttpMethod.GET, null,
-                            new ParameterizedTypeReference<List<OpenFinanceParticipant>>() {});
+        final var response=
+            restTemplate.exchange(
+                OpenFinanceBrazil.URL_PARTICIPANTS,
+                HttpMethod.GET, null,
+                new ParameterizedTypeReference<List<OpenFinanceParticipant>>() {});
 
-            return response.getBody();
+        return response.getBody();
     }
 }
