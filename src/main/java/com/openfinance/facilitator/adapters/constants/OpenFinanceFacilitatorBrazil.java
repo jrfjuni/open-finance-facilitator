@@ -8,5 +8,5 @@ public interface OpenFinanceFacilitatorBrazil {
 
    // INTERNAL ENDPOINT
    String PARTICIPANTS_ENDPOINT = "/v1/open-finance-facilitator/participants";
-   String DATA_DICTIONARY_ENDPOINT = "/v1/open-finance-facilitator/data-dictionary";
+   String DATA_DICTIONARY_ENDPOINT = "/v1/open-finance-facilitator/data-dictionaries";
 }
