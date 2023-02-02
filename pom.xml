@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gft</groupId>
-	<artifactId>open-finance-participants</artifactId>
+	<artifactId>open-finance-facilitator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>open-finance-participants</name>
-	<description>Project to facilidate the search and extraction of data from OpenFinance participants.</description>
+	<name>open-finance-facilitator</name>
+	<description>Project to facilidate the search and extraction of data from OpenFinance.</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
