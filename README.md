@@ -2,7 +2,7 @@
   <p align="center">OFP-FACILITATOR</p>
 </h1>
 
-> OFP-FACILITATOR code is available on branch [ofp-facilitator-v1](https://github.com/jrfjuni/open-finance-participants-facilitator/tree/ofp-facilitator-v1)
+> OF-FACILITATOR code is available on branch [master](https://github.com/jrfjuni/open-finance-participants-facilitator/tree/master)
 
 ## Introduction
 
